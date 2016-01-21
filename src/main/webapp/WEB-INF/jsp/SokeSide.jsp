@@ -58,10 +58,10 @@
                         <form:form modelAttribute="resultat" action="abonnere">
                         <form:input type="hidden" path="resultat" value="${liste}"/>
                         <c:if test="${liste.getClass().simpleName=='Bruker' or liste.getClass().simpleName=='Fag' or liste.getClass().simpleName=='Klasse'}"> 
-                        <input class="oversikt" id="abonKnapp" type='submit' name='knappTilAbonnement' value='Abonner'/>
+                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilAbonnement' value='Abonner'/>
                         </c:if>
                         <c:if test="${liste.getClass().simpleName=='Rom'}">
-                        <input class="oversikt" id="abonKnapp" type='submit' name='knappTilKart' value='Se kart'/>
+                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilKart' value='Se kart'/>
                         </c:if>
                         </form:form>
                     </td>
