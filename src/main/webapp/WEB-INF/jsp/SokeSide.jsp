@@ -55,13 +55,13 @@
             <c:forEach var="liste" items="${liste}">
                 <tr>
                     <td><c:out value="${liste}"></c:out>
-                        <form:form modelAttribute="resultat" action="abonnere">
+                        <form:form modelAttribute="resultat">
                         <form:input type="hidden" path="resultat" value="${liste}"/>
                         <c:if test="${liste.getClass().simpleName=='Bruker' or liste.getClass().simpleName=='Fag' or liste.getClass().simpleName=='Klasse'}"> 
-                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilAbonnement' value='Abonner'/>
+                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilAbonnement' formaction="abonnere" value='Abonner'/>
                         </c:if>
                         <c:if test="${liste.getClass().simpleName=='Rom'}">
-                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilKart' value='Se kart'/>
+                        <input class="defaultKnappMin" id="abonKnapp" type='submit' name='knappTilKart' formaction="sekart" value='Se kart'/>
                         </c:if>
                         </form:form>
                     </td>

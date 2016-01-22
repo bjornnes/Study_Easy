@@ -103,15 +103,15 @@ public class SokeKontroller {
                         si.leggTilAbonemennt(new Abonemennt(bruker.getEpost(), fagsplit[i], 1));
                     }
                     catch(Exception e){
-                        System.out.println("heiho");
                         model.addAttribute("melding", "feilmelding.duplikatAbonnement");
                     }
                 }
             }
         }
         else if("Se kart".equals(request.getParameter("knappTilKart"))){
-                //sørg for at riktig etasje vises           
-                return "VelgRom";
+                //sørg for at riktig etasje vises
+           return "VelgRom";
+               
             }
         return "SokeSide";             
         } 
