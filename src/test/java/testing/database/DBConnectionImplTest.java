@@ -82,8 +82,8 @@ public class DBConnectionImplTest {
         RomListe = new ArrayList();
         BrukerListe = new ArrayList();
         FagListe = new ArrayList();
-        fraDato = new Timestamp(2016-1-22);
-        tilDato = new Timestamp(2016-1-23);
+        fraDato = Timestamp.valueOf("2016-1-22 09:15:00.0");
+        tilDato = Timestamp.valueOf("2016-1-23 12:30:00.0");
         
         ab = new Abonemennt("test4@aol.com","henrik_bjorkheim@hotmail.com", 0);
         ac = new Abonemennt("ola@hotmail.com", "TDAT2001", 1);
@@ -108,7 +108,6 @@ public class DBConnectionImplTest {
         kEvent.setTittel("Lekser");
         kEvent.setRom("GR114");
         kEvent.setFag("");
-        kEvent.setId(4);
         kEvent.setNotat("Må gjøre");
         kEvent.setPrivat(true);
         kEvent.setTilhorerEvent(2);
@@ -218,10 +217,10 @@ public class DBConnectionImplTest {
         assertTrue(dbc.fjernKalenderEvent(kEvent));
     }
     
-    @Test
+    /*@Test
     public void testleggTilKalenderEvent(){
         assertTrue(dbc.leggTilEvent(kEvent));
-    }
+    }*/
   
     @Test
     public void test_slettAbonnement(){
